@@ -1,7 +1,9 @@
-import os
+import logging
 
 from telegram.ext import Updater, CommandHandler
 from settings import TG_BOT_API_KEY
+
+logging.basicConfig(filename="bot.log", level=logging.INFO)
 
 
 def greeting_user(update, contact):
@@ -15,6 +17,7 @@ def start_echobot():
     dp = echobot.dispatcher
     dp.add_handler(CommandHandler('start', greeting_user))
 
+    logging.info('Бот приступил к работе')
     echobot.start_polling()
     echobot.idle()
 

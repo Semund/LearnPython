@@ -2,3 +2,4 @@
 venv
 .idea
 /lesson_1/settings.py
+/lesson_1/bot.log
