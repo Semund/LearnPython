@@ -1,21 +1,31 @@
 import logging
 
-from telegram.ext import Updater, CommandHandler
-from settings import TG_BOT_API_KEY
+import settings
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+
 
 logging.basicConfig(filename="bot.log", level=logging.INFO)
 
 
-def greeting_user(update, contact):
-    update.message.reply_text(f'Привет, {update["message"].from_user.first_name}! Ты вызвал команду '
-                              f'{update["message"].text}')
+def greeting_user(update, context):
+    update.message.reply_text(f'Привет, {update.message.from_user.first_name}! Ты вызвал команду '
+                              f'{update.message.text}')
+
+
+def send_echo_message(update, context):
+    message = update.message.text
+    update.message.reply_text(message)
+
+
+def adding_bot_handlers(dispatcher):
+    dispatcher.add_handler(CommandHandler('start', greeting_user))
+    dispatcher.add_handler(MessageHandler(Filters.text, send_echo_message))
 
 
 def start_echobot():
-    echobot = Updater(TG_BOT_API_KEY, use_context=True)
+    echobot = Updater(settings.TG_BOT_API_KEY, use_context=True)
 
-    dp = echobot.dispatcher
-    dp.add_handler(CommandHandler('start', greeting_user))
+    adding_bot_handlers(echobot.dispatcher)
 
     logging.info('Бот приступил к работе')
     echobot.start_polling()
