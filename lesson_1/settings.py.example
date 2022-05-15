@@ -1,0 +1,3 @@
+# Execute in shell:
+# cp settings.py.example settings.py
+TG_BOT_API_KEY = 'Insert your telegram API here'

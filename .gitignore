@@ -1,0 +1,4 @@
+# created by virtualenv automatically
+venv
+.idea
+/lesson_1/settings.py
