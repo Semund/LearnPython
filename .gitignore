@@ -3,3 +3,4 @@ venv
 .idea
 /week_1/settings.py
 /week_1/bot.log
+/week_1/__pycache__
