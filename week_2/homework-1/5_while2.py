@@ -15,13 +15,24 @@
     
 """
 
-questions_and_answers = {}
+questions_and_answers = {
+    '2 + 2': '4',
+    '3 * 3': '9',
+    '4 - 5': '-1',
+    '9 * 8': '72',
+}
+
 
 def ask_user(answers_dict):
     """
     Замените pass на ваш код
     """
-    pass
-    
+    user_question = input('Введите Ваш вопрос:\nПользователь: ')
+    while user_question not in answers_dict.keys():
+        print('Программа: Я не понимаю вопроса.')
+        user_question = input('Введите Ваш вопрос:\nПользователь: ')
+    print(f'Программа: {answers_dict[user_question]}')
+
+
 if __name__ == "__main__":
     ask_user(questions_and_answers)

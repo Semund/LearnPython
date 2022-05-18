@@ -1,0 +1,109 @@
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/semund/projects/LearnPython/week_2/homework-1/8_ephem_bot.py", line 45, in get_planetary_position
+    planet_name = update.message.text.split()[-1]
+AttributeError: 'NoneType' object has no attribute 'text'
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/semund/projects/LearnPython/week_2/homework-1/8_ephem_bot.py", line 45, in get_planetary_position
+    planet_name = update.message.text.split()[-1]
+AttributeError: 'NoneType' object has no attribute 'text'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/semund/projects/LearnPython/week_2/homework-1/8_ephem_bot.py", line 45, in get_planetary_position
+    planet_name = update.message.text
+AttributeError: 'NoneType' object has no attribute 'text'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/semund/projects/LearnPython/week_2/homework-1/8_ephem_bot.py", line 48, in get_planetary_position
+    'Mars': ephem.constellation(ephem.Mars(ephem.now))
+ValueError: dates must be initialized from a number, string, tuple, or datetime
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/semund/projects/LearnPython/week_2/homework-1/8_ephem_bot.py", line 51, in get_planetary_position
+    print(ephem.constellation(planets_ephem_dict['Mars'](ephem.now)))
+ValueError: dates must be initialized from a number, string, tuple, or datetime
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/semund/projects/LearnPython/week_2/homework-1/8_ephem_bot.py", line 50, in get_planetary_position
+    'Earth': ephem.Earth,
+AttributeError: module 'ephem' has no attribute 'Earth'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/semund/projects/LearnPython/venv/lib/python3.10/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/semund/projects/LearnPython/week_2/homework-1/8_ephem_bot.py", line 58, in get_planetary_position
+    planet_name = update.message.text.split()[-1]
+AttributeError: 'NoneType' object has no attribute 'text'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+apscheduler.scheduler - INFO - Scheduler has been shut down
+apscheduler.scheduler - INFO - Scheduler started

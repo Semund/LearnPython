@@ -27,11 +27,14 @@ def main():
     for product in product_table:
         current_sum = sum(product['items_sold'])
         total_sum_products += current_sum
+
         current_avg = current_sum / len(product['items_sold'])
         total_avg_product += current_avg
+
         print(f'Статистика товара {product["product"]}:\n'
               f'Продано всего: {current_sum}\n'
               f'Средние продажи: {current_avg}')
+
     print(f'Общая статистика:\n'
           f'Продано всего: {total_sum_products}\n'
           f'Средние продажи: {total_avg_product / 3}')
