@@ -1,10 +1,11 @@
 # created by virtualenv automatically
 venv
 .idea
-/week_1/settings.py
-/week_1/bot.log
-/week_1/__pycache__
+/homework-week-1/settings.py
+/homework-week-1/bot.log
+/homework-week-1/__pycache__
 /homework-week-2/homework-1/settings.py
 /homework-week-2/homework-1/bot.log
 /homework-week-2/settings.py
 /homework-week-2/bot.log
+
