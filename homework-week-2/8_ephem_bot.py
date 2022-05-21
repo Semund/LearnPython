@@ -44,24 +44,13 @@ def talk_to_me(update, context):
 
 
 def get_planetary_position(update, context):
-    planets_ephem_dict = {
-        'Mercury': ephem.Mercury,
-        'Venus': ephem.Venus,
-        'Mars': ephem.Mars,
-        'Jupiter': ephem.Jupiter,
-        'Saturn': ephem.Saturn,
-        'Uranus': ephem.Uranus,
-        'Neptune': ephem.Neptune,
-        'Pluto': ephem.Pluto,
-    }
-
     planet_name = update.message.text.split()[-1].capitalize()
 
-    if planet_name in planets_ephem_dict.keys():
-        constellation = ephem.constellation(planets_ephem_dict[planet_name](ephem.now()))[-1]
+    try:
+        constellation = ephem.constellation(getattr(ephem, planet_name)(ephem.now()))[-1]
         message = f'{planet_name} находится в созвездии {constellation}'
-    else:
-        message = 'Я не знаю такой планеты'
+    except AttributeError:
+        message = 'Я не знаю такого объекта'
 
     update.message.reply_text(message)
 
