@@ -46,10 +46,10 @@ def talk_to_me(update, context):
 def get_planetary_position(update, context):
     planet_name = update.message.text.split()[-1].capitalize()
 
-    try:
+    if hasattr(ephem, planet_name):
         constellation = ephem.constellation(getattr(ephem, planet_name)(ephem.now()))[-1]
         message = f'{planet_name} находится в созвездии {constellation}'
-    except AttributeError:
+    else:
         message = 'Я не знаю такого объекта'
 
     update.message.reply_text(message)
