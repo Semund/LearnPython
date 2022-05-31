@@ -1,24 +1,32 @@
+import requests
 from pprint import pprint
 
-import requests
-
-WEATHER_API = "b89a7e190e844a54b0a144114223005"
+import settings
 
 
 def weather_by_city(city_name):
     url = "http://api.worldweatheronline.com/premium/v1/weather.ashx"
     params = {
         'q': city_name,
-        'key': WEATHER_API,
+        'key': settings.WEATHER_API,
         'num_of_days': 1,
         'format': 'json',
         'lang': 'ru',
     }
 
-    result = requests.get(url, params=params)
-    return result.json()
+    try:
+        response = requests.get(url, params=params)
+        if response:
+            if 'current_condition' in response.json()['data']:
+                try:
+                    return response.json()['data']['current_condition'][0]
+                except(IndexError, TypeError):
+                    return False
+    except (requests.RequestException,):
+        return False
+    return False
 
 
 if __name__ == '__main__':
     weather = weather_by_city('Saint-Petersburg')
-    print(weather)
+    pprint(weather)
