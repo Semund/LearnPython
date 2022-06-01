@@ -16,15 +16,14 @@ def get_weather_by_city(city_name):
 
     try:
         response = requests.get(url, params=params)
-        if response:
-            if 'current_condition' in response.json()['data']:
-                try:
-                    return response.json()['data']['current_condition'][0]
-                except(IndexError, TypeError):
-                    return False
+        response.raise_for_status()
+        if 'current_condition' in response.json()['data']:
+            try:
+                return response.json()['data']['current_condition'][0]
+            except(IndexError, TypeError):
+                return False
     except (requests.RequestException,):
         return False
-    return False
 
 
 if __name__ == '__main__':
