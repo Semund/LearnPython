@@ -4,7 +4,7 @@ from pprint import pprint
 import settings
 
 
-def weather_by_city(city_name):
+def get_weather_by_city(city_name):
     url = "http://api.worldweatheronline.com/premium/v1/weather.ashx"
     params = {
         'q': city_name,
@@ -28,5 +28,5 @@ def weather_by_city(city_name):
 
 
 if __name__ == '__main__':
-    weather = weather_by_city('Saint-Petersburg')
+    weather = get_weather_by_city('Saint-Petersburg')
     pprint(weather)
