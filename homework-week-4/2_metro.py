@@ -1,7 +1,7 @@
 import json
 from pprint import pprint
 
-FILE_PATH = "2_metro.json"
+FILE_PATH = "metro.json"
 
 
 def get_metro_repair_stations(data_json):

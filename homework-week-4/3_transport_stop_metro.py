@@ -2,7 +2,6 @@ import csv
 import re
 
 FILE_STOP_PATH = "./ground_transport_stops.csv"
-FILE_METRO_PATH = "./2_metro.json"
 
 
 def get_max_transport_stop_around_metro(data_file):
