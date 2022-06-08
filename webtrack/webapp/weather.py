@@ -1,14 +1,15 @@
 import requests
+
 from pprint import pprint
 
-import settings
+from flask import current_app
 
 
 def get_weather_by_city(city_name):
     url = "http://api.worldweatheronline.com/premium/v1/weather.ashx"
     params = {
         'q': city_name,
-        'key': settings.WEATHER_API,
+        'key': current_app.config['WEATHER_API'],
         'num_of_days': 1,
         'format': 'json',
         'lang': 'ru',
