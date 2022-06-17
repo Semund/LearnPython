@@ -1,6 +1,7 @@
 # created by virtualenv automatically
 venv
 .idea
+__pychache__
 /homework-week-1/settings.py
 /homework-week-1/bot.log
 /homework-week-1/__pycache__
