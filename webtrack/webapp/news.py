@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from flask import current_app
 
 
 def __get_html_content(url):
@@ -27,7 +28,7 @@ def __get_news_from_html_soup(soup):
 
 
 def get_news():
-    url = 'https://www.python.org/blogs/'
+    url = current_app.config['URL_NEWS']
     html_content = __get_html_content(url)
     if html_content:
         soup = BeautifulSoup(html_content, 'html.parser')

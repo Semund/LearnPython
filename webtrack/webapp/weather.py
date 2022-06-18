@@ -6,7 +6,7 @@ from flask import current_app
 
 
 def get_weather_by_city(city_name):
-    url = "http://api.worldweatheronline.com/premium/v1/weather.ashx"
+    url = current_app.config['URL_WEATHER']
     params = {
         'q': city_name,
         'key': current_app.config['WEATHER_API'],
