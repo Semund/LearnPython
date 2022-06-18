@@ -1,9 +1,11 @@
 from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import Query
 
 from db import Base, engine
 
 
 class User(Base):
+    query: Query
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True)
