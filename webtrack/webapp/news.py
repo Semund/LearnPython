@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 from flask import current_app
 
-from webapp.model import db, News
+from webapp.db import db, News
 
 def __get_html_content(url):
     try:
