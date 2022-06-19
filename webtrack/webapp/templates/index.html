@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ page_title }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      {% with messages = get_flashed_messages()  %}
+        {% if messages %}
+          <div class="alert alert-warning" role="alert">
+            {% for message in messages %}
+              {{ message }}
+            {% endfor %}
+
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      <h1>News</h1>
+
+      {% if news %}
+        <ul>
+          {% for item in news %}
+            <li>
+              <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+              <h4>{{ item.published.strftime('%d.%m.%Y') }}</h4>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>Сервис новостей не доступен</p>
+      {% endif %}
+
+    </div>
+    <div class="col-4">
+      <h1>Weather</h1>
+      {% if weather %}
+    <ul>
+      <li>Temperature: {{ weather.temp_C }}</li>
+      <li>Humidity: {{ weather.humidity }}</li>
+    </ul>
+  {% else %}
+    <p>Сервис погоды не доступен</p>
+  {% endif %}
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+</html>
